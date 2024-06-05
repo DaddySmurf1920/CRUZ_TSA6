@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,7 +13,7 @@ body {
 .character {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -27,6 +26,10 @@ body {
 .character h2 {
     margin: 0;
     font-size: 1rem;
+}
+.character p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
 }
 .char1 {
     grid-column: span 2;
@@ -48,6 +51,7 @@ body {
     }
     .character {
         flex-direction: column;
+        align-items: start;
     }
     .char1, .char4, .char2, .char3 {
         grid-column: span 1;
@@ -67,5 +71,6 @@ body {
     }
     .character {
         flex-direction: row;
+        align-items: center;
     }
 }
