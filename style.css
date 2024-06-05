@@ -1,1 +1,71 @@
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.character {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+.character img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.character h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+.char1 {
+    grid-column: span 2;
+}
+.char4 {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+.char5 {
+    grid-column: 4;
+    grid-row: span 2;
+}
+
+/* First Breakpoint */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .character {
+        flex-direction: column;
+    }
+    .char1, .char4, .char2, .char3 {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+    .char5 {
+        grid-column: span 2;
+        flex-direction: row;
+    }
+}
+
+/* Second Breakpoint */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+    .character {
+        flex-direction: row;
+    }
+}
