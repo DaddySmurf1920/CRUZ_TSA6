@@ -1,9 +1,7 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333333;
+    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -19,22 +17,20 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff;
-    border: 2px solid #1e1e1e;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .character img {
     width: 150px;
     height: auto;
-    margin-bottom: 20px;
-    order: -1; /* Move the image above the text */
+    margin-bottom: 10px;
 }
 
 .character div {
     text-align: center;
-    flex-grow: 1; /* Allow content to expand vertically */
 }
 
 .character h2, .character h3 {
@@ -63,6 +59,15 @@ body {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
     }
+    
+    .character {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+    
+    .character.char5 {
+        grid-column: span 2;
+    }
 }
 
 /* Second Breakpoint */
@@ -70,5 +75,10 @@ body {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+    
+    .character {
+        grid-column: span 1;
+        grid-row: auto;
     }
 }
