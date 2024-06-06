@@ -29,6 +29,7 @@ body {
     width: 150px;
     height: auto;
     margin-bottom: 20px;
+    order: -1; /* Move the image above the text */
 }
 
 .character div {
