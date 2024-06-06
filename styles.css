@@ -95,4 +95,10 @@ body {
         grid-template-rows: auto;
         justify-content: center; /* Align characters vertically */
     }
+    
+    /* Character specific adjustments */
+    .character {
+        grid-column: span 1;
+        grid-row: auto;
+    }
 }
