@@ -62,27 +62,27 @@ body {
     }
     
     /* Character specific adjustments */
-    #Ging {
-        grid-column: 1/2;
+    #Batman {
+        grid-column: 1/3;
         grid-row: 1/2;
     }
     
-    #Hisoka {
-        grid-column: 1/2;
+    #Nightwing {
+        grid-column: 1/3;
         grid-row: 2/3;
     }
     
-    #Killua {
+    #RedHood {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    #Robin {
         grid-column: 2/3;
         grid-row: 3/4;
     }
     
-    #Pitou {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    #Meruem {
+    #Scarecrow {
         grid-column: 1/2;
         grid-row: 4/5;
     }
@@ -93,11 +93,6 @@ body {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-    }
-    
-    /* Character specific adjustments */
-    .character {
-        grid-column: span 1;
-        grid-row: auto;
+        justify-content: center; /* Align characters vertically */
     }
 }
