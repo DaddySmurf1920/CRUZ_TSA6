@@ -1,9 +1,9 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #f0f0f0;
+    background-color: #ffffff;
+    color: #333333;
 }
 .container {
     display: grid;
@@ -17,7 +17,8 @@ body {
     align-items: flex-start;
     justify-content: start;
     padding: 20px;
-    background-color: #1e1e1e;
+    background-color: #ffffff;
+    border: 2px solid #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -25,7 +26,7 @@ body {
     width: 100px;
     height: 150px;
     margin-right: 20px;
-    border: 2px solid #444;
+    border: 2px solid #ffcc00;
 }
 .character div {
     max-width: 300px;
@@ -35,67 +36,10 @@ body {
 }
 .character h2 {
     font-size: 1.8rem;
-    color: #ffcc00;
+    color: #1e1e1e;
 }
 .character h3 {
     font-size: 1.4rem;
-    color: #ccc;
+    color: #777777;
 }
-.character p {
-    margin: 10px 0 0;
-    font-size: 1rem;
-    color: #bbb;
-}
-.char1 {
-    grid-column: span 2;
-    align-self: start;
-}
-.char4 {
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    align-self: start;
-}
-.char5 {
-    grid-column: 4;
-    grid-row: span 2;
-    align-self: start;
-}
-
-/* First Breakpoint */
-@media (max-width: 1024px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .character {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .character img {
-        margin: 0 0 10px 0;
-    }
-    .char1, .char4, .char2, .char3 {
-        grid-column: span 1;
-        grid-row: auto;
-    }
-    .char5 {
-        grid-column: span 2;
-    }
-}
-
-/* Second Breakpoint */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-    }
-    .character {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .character img {
-        margin: 0 0 10px 0;
-    }
-}
+.character p
