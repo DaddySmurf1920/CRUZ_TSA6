@@ -42,4 +42,31 @@ body {
     font-size: 1.4rem;
     color: #777777;
 }
-.character p
+.character p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* First Breakpoint */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .character {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .character img {
+        margin: 0 0 10px 0;
+    }
+}
+
+/* Second Breakpoint */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
