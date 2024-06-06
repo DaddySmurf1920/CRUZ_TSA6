@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.container {
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.character {
+    border: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.41);
+    border-radius: 10px;
+}
+
+.character img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.character h2, .character h3 {
+    margin: 0;
+}
+
+.character h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.character h3 {
+    font-size: 1.4rem;
+    color: #000000cf;
+}
+
+.character p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.character.large {
+    grid-column: span 2;
+}
+
+.character.horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.character.horizontal img {
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+#Batman {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-color: #ffd50056;
+}
+
+#Nightwing {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: #005eff3b;
+}
+
+#RedHood {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: #ff3c0050;
+}
+
+#Robin {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-color: #ff00004f;
+}
+
+#Scarecrow {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8188555c;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .character {
+        flex-direction: column;
+    }
+
+    #Batman, #Nightwing, #RedHood, #Robin {
+        flex-direction: column;
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    #Batman img, #Robin img {
+        margin: 0 auto;
+    }
+
+    #Batman {
+        order: 1;
+    }
+    
+    #Nightwing {
+        order: 2;
+    }
+
+    #RedHood {
+        order: 3;
+    }
+
+    #Robin {
+        order: 4;
+    }
+
+    #Scarecrow {
+        grid-column: span 2;
+        flex-direction: row;
+        align-items: flex-start;
+        order: 5;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        background-color: #f9f9f9;
+        grid-template-columns: 1fr;
+    }
+
+    .character {
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .character img {
+        margin: 10px auto 0;
+    }
+
+    #Batman, #Nightwing, #RedHood, #Robin, #Scarecrow {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
