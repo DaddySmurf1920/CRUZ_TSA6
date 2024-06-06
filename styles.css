@@ -54,7 +54,7 @@ body {
     color: #555555;
 }
 
-/* Breakpoint for max-width: 768px */
+/* First Breakpoint */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
@@ -88,7 +88,7 @@ body {
     }
 }
 
-/* Breakpoint for max-width: 480px */
+/* Second Breakpoint */
 @media (max-width: 480px) {
     .container {
         grid-template-columns: 1fr;
@@ -97,7 +97,7 @@ body {
     }
     
     /* Character specific adjustments */
-    #Batman, #Nightwing, #RedHood, #Robin, #Scarecrow {
+    .character {
         grid-column: span 1;
         grid-row: auto;
     }
