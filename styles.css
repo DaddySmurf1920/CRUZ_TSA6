@@ -5,43 +5,50 @@ body {
     background-color: #ffffff;
     color: #333333;
 }
+
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     padding: 20px;
 }
+
 .character {
     display: flex;
-    align-items: flex-start;
-    justify-content: start;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     background-color: #ffffff;
     border: 2px solid #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .character img {
-    width: 100px;
-    height: 150px;
-    margin-right: 20px;
-    border: 2px solid #ffcc00;
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
 }
+
 .character div {
-    max-width: 300px;
+    text-align: center;
 }
+
 .character h2, .character h3 {
     margin: 0;
 }
+
 .character h2 {
     font-size: 1.8rem;
     color: #1e1e1e;
 }
+
 .character h3 {
     font-size: 1.4rem;
     color: #777777;
 }
+
 .character p {
     margin-top: 10px;
     font-size: 1rem;
@@ -50,6 +57,14 @@ body {
 
 /* First Breakpoint */
 @media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/* Second Breakpoint */
+@media (max-width: 480px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
