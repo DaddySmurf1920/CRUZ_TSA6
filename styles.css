@@ -69,4 +69,7 @@ body {
     .container {
         grid-template-columns: 1fr;
     }
+    .character {
+        align-items: center;
+    }
 }
