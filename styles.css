@@ -97,7 +97,7 @@ body {
     }
     
     /* Character specific adjustments */
-    .character {
+    #Batman, #Nightwing, #RedHood, #Robin, #Scarecrow {
         grid-column: span 1;
         grid-row: auto;
     }
