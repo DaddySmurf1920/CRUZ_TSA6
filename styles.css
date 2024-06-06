@@ -71,34 +71,3 @@ body {
         grid-column: 1/3;
         grid-row: 2/3;
     }
-    
-    #RedHood {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    #Robin {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-    
-    #Scarecrow {
-        grid-column: 1/2;
-        grid-row: 4/5;
-    }
-}
-
-/* Second Breakpoint */
-@media (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        justify-content: center; /* Align characters vertically */
-    }
-    
-    /* Character specific adjustments */
-    .character {
-        grid-column: span 1;
-        grid-row: auto;
-    }
-}
