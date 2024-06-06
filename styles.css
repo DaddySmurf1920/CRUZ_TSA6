@@ -1,13 +1,7 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 20px;
     padding: 20px;
 }
@@ -27,7 +21,6 @@ body {
     width: 150px;
     height: auto;
     margin-bottom: 10px;
-    order: -1; /* Move the image above the text */
 }
 
 .character div {
@@ -54,20 +47,28 @@ body {
     color: #555555;
 }
 
-/* First Breakpoint */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-    }
-    
-    /* Character specific adjustments */
-    #Batman {
-        grid-column: 1/3;
-        grid-row: 1/2;
-    }
-    
-    #Nightwing {
-        grid-column: 1/3;
-        grid-row: 2/3;
-    }
+/* Character specific adjustments for full screen layout */
+#Batman {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#Nightwing {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+#RedHood {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#Robin {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#Scarecrow {
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
