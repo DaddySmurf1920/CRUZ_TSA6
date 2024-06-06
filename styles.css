@@ -54,30 +54,48 @@ body {
     color: #555555;
 }
 
-/* First Breakpoint */
+/* Breakpoint for max-width: 768px */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
     }
     
-    .character {
-        grid-column: span 1;
-        grid-row: auto;
+    /* Character specific adjustments */
+    #Ging {
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
     
-    .character.char5 {
-        grid-column: span 2;
+    #Hisoka {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #Killua {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    
+    #Pitou {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    #Meruem {
+        grid-column: 1/2;
+        grid-row: 4/5;
     }
 }
 
-/* Second Breakpoint */
+/* Breakpoint for max-width: 480px */
 @media (max-width: 480px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
     
+    /* Character specific adjustments */
     .character {
         grid-column: span 1;
         grid-row: auto;
